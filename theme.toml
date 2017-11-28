@@ -1,0 +1,6 @@
+author = "Matthew Warren"
+description = "A very simple theme for HUGO"
+license = "MIT"
+name = "hugo-steadfast"
+source_repo = "github.com:haircut/hugo-steadfast.git"
+tags = ["blog", "hugo", "steadfast"]

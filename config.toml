@@ -1,0 +1,17 @@
+baseurl = "https://example.org"
+languageCode = "en-us"
+title = "Steadfast"
+copyright = "CC by 4.0"
+canonifyurls = true
+
+[params]
+    tagline = "A very simple HUGO theme"
+    ga_api_key = false
+    avatar = "../../img/avatar.jpg"
+    bio = "Bio content"
+    github = "http://github.com/username"
+    twitter = "https://twitter.com/username"
+    linkedin = "https://www.linkedin.com/in/username"
+    footer_1 = "Footer column 1"
+    footer_2 = "Footer column 2"
+    footer_3 = "Footer column 3"

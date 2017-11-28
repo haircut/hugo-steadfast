@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>{{ if ne .URL "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css" />
+  <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+{{ if isset .Params "featuredimage" }}
+<header class="header" role="banner">
+{{"<!-- FeaturedImage. Otherwise show default //-->" | safeHTML}}
+{{ else }}
+<header class="header" role="banner">
+{{ end }}
+      <section id="branding">
+        <div id="site-title">
+          <a href="{{ .Site.BaseURL }}">
+            {{ .Site.Title }}
+            <span class="site-tagline">{{ .Site.Params.tagline }}</span>
+          </a>
+        </div>
+        <nav id="mainmenu">
+          <ul>
+            <li><a href="{{ .Site.BaseURL }}">Articles</a></li>
+            {{ with .Site.Params.github }}<li><a href="{{ . }}" target="_blank">Github</a></li>{{ end }}
+            {{ with .Site.Params.twitter }}<li><a href="{{ . }}" target="_blank">Twitter</a></li>{{ end }}
+            {{ with .Site.Params.linkedin }}<li><a href="{{ . }}" target="_blank">LinkedIn</a></li>{{ end }}
+          </ul>
+        </nav>
+        <input type="checkbox" id="op"></input>
+        <div class="lower">
+          <label for="op">Menu</label>
+        </div>
+        <div class="overlay overlay-hugeinc">
+          <label for="op"></label>
+          <nav id="menu" role="navigation">
+            <ul>
+            <li><a href="{{ .Site.BaseURL }}">Articles</a></li>
+            {{ with .Site.Params.github }}<li><a href="{{ . }}" target="_blank">Github</a></li>{{ end }}
+            {{ with .Site.Params.twitter }}<li><a href="{{ . }}" target="_blank">Twitter</a></li>{{ end }}
+            {{ with .Site.Params.linkedin }}<li><a href="{{ . }}" target="_blank">LinkedIn</a></li>{{ end }}
+          </ul>
+          </nav>
+        </div>
+        <div class="clearfix"></div>
+      </section>
+
+    </header>
+
+    <div id="container">
+        <div class="post-heading">
+            <h1>{{ if and ($.IsNode) (eq $.Section "") }} Articles {{ else }}
+            {{ .Title }}
+              {{ end }}
+            </h1>
+          </div>
