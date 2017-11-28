@@ -132,8 +132,8 @@ button,
 input,
 select,
 textarea {
-    font-family: Lato, Avenir, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    color: #3A3B3C;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    color: #3e404b;
     font-weight: 300;
     font-size: 1.125rem;
     line-height: 1.5;
@@ -187,11 +187,12 @@ h2,
 h2 a,
 h3,
 h3 a {
-    font-weight: 400
+    font-weight: 700;
+    color: #323648;
 }
 b,
 strong {
-    font-weight: 400
+    font-weight: 700;
 }
 h1 {
     font-size: 2.2em
@@ -272,7 +273,7 @@ a.moretag:hover {
 #branding,
 #mainmenu li,
 #site-title a {
-    font-family: Lato, Avenir, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 article p {
     margin: 1.5rem 0;
@@ -352,7 +353,7 @@ footer .menu-item a:hover {
     color: #444444;
 }
 #mainmenu a:hover {
-    border-bottom: 3px solid #357edd;
+    border-bottom: 3px solid #5e2ca5;
 }
 #mainmenu li {
     float: left;
@@ -414,11 +415,24 @@ footer .menu-item a:hover {
 }
 .post-heading h1 {
     font-size: 2.2em;
-    font-weight: 400;
+    font-weight: 700;
     color: #444444;
     display: table-cell;
     vertical-align: middle
 }
+.entry-meta {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.post-line {
+    display: block;
+    margin: 0 auto;
+    width: 12rem;
+    height: 2em;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,0.2);
+}
+
 .lower,
 input {
     display: none
@@ -631,123 +645,81 @@ tr td:hover {
 .hljs {
     display: block;
     padding: .5em;
-    background: #23241f
+    color: #383a42;
+    background: #fcf6f0;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px #faede5;
+    overflow-x: auto;
 }
-.css .hljs-function .hljs-preprocessor,
-.css .hljs-rules,
-.css .hljs-value,
-.hljs,
-.hljs-pragma,
-.hljs-tag {
-    color: #f8f8f2
-}
-.hljs-emphasis,
-.hljs-strong,
-.hljs-strongemphasis {
-    color: #a8a8a2
-}
-.alias .hljs-keyword,
-.hljs-blockquote,
-.hljs-bullet,
-.hljs-hexcolor,
-.hljs-horizontal_rule,
-.hljs-literal,
-.hljs-number,
-.hljs-regexp {
-    color: #ae81ff
-}
-.css .hljs-class,
-.hljs-class .hljs-title:last-child,
-.hljs-code,
-.hljs-tag .hljs-value,
-.hljs-title {
-    color: #a6e22e
-}
-.hljs-link_url {
-    font-size: 80%
-}
-.alias .hljs-keyword:first-child,
-.clojure .hljs-built_in,
-.css .hljs-important,
-.css .hljs-tag,
-.css .unit,
-.hljs-attribute,
-.hljs-change,
-.hljs-flow,
-.hljs-function,
-.hljs-header,
-.hljs-keyword,
-.hljs-symbol,
-.hljs-symbol .hljs-string,
-.hljs-tag .hljs-title,
-.hljs-value,
-.hljs-winutils,
-.lisp .hljs-title,
-.nginx .hljs-title,
-.tex .hljs-special {
-    color: #F92672
-}
-.css .hljs-attribute,
-.hljs-class .hljs-keyword:first-child,
-.hljs-constant,
-.hljs-function .hljs-keyword {
-    color: #66d9ef
-}
-.hljs-class .hljs-title,
-.hljs-params,
-.hljs-variable {
-    color: #f8f8f2
-}
-.apache .hljs-cbracket,
-.apache .hljs-tag,
-.css .hljs-id,
-.django .hljs-filter .hljs-argument,
-.django .hljs-template_tag,
-.django .hljs-variable,
-.haskell .hljs-type,
-.hljs-addition,
-.hljs-attr_selector,
-.hljs-built_in,
-.hljs-envvar,
-.hljs-link_label,
-.hljs-link_url,
-.hljs-prompt,
-.hljs-pseudo,
-.hljs-stream,
-.hljs-string,
-.hljs-subst,
-.ruby .hljs-class .hljs-parent,
-.smalltalk .hljs-array,
-.smalltalk .hljs-class,
-.smalltalk .hljs-localvars,
-.sql .hljs-aggregate,
-.tex .hljs-command {
-    color: #e6db74
-}
-.apache .hljs-sqbracket,
 .hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
 .hljs-deletion,
-.hljs-doctype,
-.hljs-javadoc,
-.hljs-pi,
-.hljs-shebang,
-.hljs-template_comment,
-.java .hljs-annotation,
-.python .hljs-decorator,
-.tex .hljs-formula {
-    color: #75715e
+.hljs-subst {
+  color: #e45649;
 }
-.coffeescript .javascript,
-.javascript .xml,
-.php .xml,
-.tex .hljs-formula,
-.xml .css,
-.xml .hljs-cdata,
-.xml .javascript,
-.xml .php,
-.xml .vbscript {
-    opacity: .5;
+
+.hljs-literal {
+  color: #0184bb;
 }
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+  color: #50a14f;
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
 @media (max-width: 1000px) {
     #footer-container {
         width: 95%;
