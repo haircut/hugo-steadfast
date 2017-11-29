@@ -261,7 +261,7 @@ a.moretag:visited {
 a.moretag:hover {
     text-decoration: underline
 }
-.smallcode {
+.smallcode, kbd, code {
     font-family: monospace;
     padding: .25em .5em;
     font-size: inherit;
